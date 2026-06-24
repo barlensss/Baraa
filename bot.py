@@ -5,7 +5,10 @@ from flask import Flask, request
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-TOKEN = os.environ.get("TELEGRAM_TOKEN")
+# ==============================================
+# TOKEN LANGSUNG DI SINI AJG!
+# ==============================================
+TOKEN = "8602001177:AAFuwGraSQKDSWEIXiBhN535iwd8-p9AWc0"
 PORT = int(os.environ.get("PORT", 8080))
 
 STORAGE_FILE = "stikers.json"
