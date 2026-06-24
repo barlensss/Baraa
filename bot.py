@@ -9,6 +9,9 @@ from instagrapi import Client
 IG_USERNAME = os.getenv("IG_USERNAME")
 IG_PASSWORD = os.getenv("IG_PASSWORD")
 
+print("USERNAME:", IG_USERNAME)
+print("PASSWORD LENGTH:", len(IG_PASSWORD) if IG_PASSWORD else 0)
+
 cl = Client()
 cl.login(IG_USERNAME, IG_PASSWORD)
 
