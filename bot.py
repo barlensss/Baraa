@@ -3,8 +3,14 @@ import random
 from instagrapi import Client
 
 # ========== LOGIN LANGSUNG ==========
+import os
+from instagrapi import Client
+
+IG_USERNAME = os.getenv("IG_USERNAME")
+IG_PASSWORD = os.getenv("IG_PASSWORD")
+
 cl = Client()
-cl.login("barasetiawannk", "BaraGanteng")
+cl.login(IG_USERNAME, IG_PASSWORD)
 
 def follow_user(username):
     try:
@@ -137,5 +143,5 @@ def poll_dms():
 
 if __name__ == "__main__":
     print("[+] Instagram Bot starting...")
-    print("[+] Login sebagai: barasetiawannk")
+    print(f"[+] Login sebagai: {IG_USERNAME}")
     poll_dms()
